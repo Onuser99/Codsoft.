@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Guess_my_Number {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        int My_number=(int)(Math.random()*100);//After multipy by 100 it will select random numbr
+        //Between 1 - 100
+        System.out.println("\n HII.. Welcome to the Guessing Game..!.");
+        System.out.println(" I have Generated number which lies between 1 to 100..");
+
+        int User_number=0;
+        do{
+          
+           System.out.println("\n Can you Guess My number ???");
+           System.out.println("\n Let start .. Guess my number  ...??");
+
+           User_number=sc.nextInt();
+           if(User_number ==My_number)
+          {
+              System.out.println("HURRY..! \n Congratulations. your Guess is ABSOLUTELY CORRECT....*");
+          
+              break;
+          }
+          
+          //2 Your number Greater than My
+          else if(User_number >=My_number)
+          {
+              System.out.println(" Ops.. Your number is Too LARGE .. \n please try Again");
+         
+            }
+          //3 Your number is Lesser than My
+          else
+          {
+              System.out.println(" Ops..Your Number is Too SMALL \n Try Again ");
+         
+            } 
+            
+        }while(User_number >=0);
+        // //Mean's Jab tak 0 se greater value deta rahega tabi tak yeh chalegi
+       
+        //Display
+        if(User_number==-1)
+        {
+        System.out.println("My number is ==>[  "+My_number+"  ]  ");
+        }
+     }
+}
