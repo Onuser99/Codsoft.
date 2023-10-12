@@ -1,0 +1,61 @@
+/**
+ * Student_grade_calculator
+ */
+import java.util.Scanner;
+ public class Student_grade_calculator {
+
+    public static void main(String[] args) {
+ 
+        Scanner sc=new Scanner(System.in);
+       
+ System.out.println("Entr Name of Student ..?");
+ String Name=sc.nextLine();
+ 
+        int Marathi,Hindi,Science,History,Math;
+        System.out.println("Entr the marks in Marathi Subject..?");
+        Marathi=sc.nextInt();
+        System.out.println("Entr the marks in Hindi Subject..?");
+        Hindi=sc.nextInt();
+        System.out.println("Entr the marks in Science Subject..?");
+        Science=sc.nextInt();
+        System.out.println("Entr the marks in History Subject..?");
+        History=sc.nextInt();
+        System.out.println("Entr the marks in Math Subject..?");
+        Math=sc.nextInt();
+        
+        //total
+        float total=Marathi+Hindi+Science+History+Math;
+        //Percentage
+       float Percentage=(total/500)*100;
+
+       System.out.println("Your marks is:-"+Percentage);
+       //Now Classify Grade based on percetage;
+       
+       if(Percentage >=90)
+       {
+           System.out.println("Congratulations  ..You have Got 'A' Grade..");
+       }
+       //
+      else if((Percentage >=80) && (Percentage <=89))
+       {
+           System.out.println("Very Good ..You have Got 'B' Grade..");
+       }
+       //
+       else if((Percentage >=70) && (Percentage <=79))
+       {
+           System.out.println("Good ..You have Got 'C' Grade..");
+       }
+       //
+       else if((Percentage >=60) && (Percentage <=69))
+       {
+           System.out.println(" ..You have Got 'D' Grade..");
+       }
+       //
+       else if((Percentage >=50) && (Percentage <=59))
+       {
+           System.out.println("Poor Performance ..You have Got 'E' Grade..");
+       }
+
+
+    }
+}
